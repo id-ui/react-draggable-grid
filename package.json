@@ -1,10 +1,10 @@
 {
-  "name": "@kaprisa57/draggable-grid",
+  "name": "@kaprisa57/react-draggable-grid",
   "version": "0.0.1",
   "description": "Draggable Grid React Component",
   "author": "kaprisa57@gmail.com",
   "license": "MIT",
-  "repository": "kseniya57/draggable-grid",
+  "repository": "kseniya57/react-draggable-grid",
   "main": "dist/index.js",
   "source": "src/index.js",
   "engines": {
