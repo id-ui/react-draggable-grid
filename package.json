@@ -1,0 +1,95 @@
+{
+  "name": "@kaprisa57/draggable-grid",
+  "version": "0.0.1",
+  "description": "Draggable Grid React Component",
+  "author": "kaprisa57@gmail.com",
+  "license": "MIT",
+  "repository": "kseniya57/draggable-grid",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "start-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "webpack --mode production",
+    "eslint": "eslint ./src/ --ext .js,.jsx --fix",
+    "pretty": "npx prettier --write \"**/*.js*\"",
+    "lint": "yarn run eslint && yarn run pretty"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "lodash": "~4.0.0",
+    "immer": "~7.0.0",
+    "prop-types": "15.5.0",
+    "react": "~16.0.0",
+    "react-dom": "~16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-a11y": "5.3.19",
+    "@storybook/addon-actions": "5.3.19",
+    "@storybook/addon-centered": "5.3.19",
+    "@storybook/addon-controls": "6.0.0-beta.15",
+    "@storybook/addon-docs": "5.3.19",
+    "@storybook/addon-knobs": "5.3.19",
+    "@storybook/addon-storysource": "5.3.19",
+    "@storybook/addons": "5.3.19",
+    "@storybook/react": "5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
+    "@storybook/theming": "^5.3.19",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "8.1.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "path": "^0.12.7",
+    "storybook-addon-react-docgen": "^1.2.41",
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "immer": "^7.0.5",
+    "lodash": "^4.17.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^16.13.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add src/*",
+      "jest"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
