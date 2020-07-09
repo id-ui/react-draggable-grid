@@ -1,6 +1,6 @@
-# react-draggable-grid React Component
+# Draggable Grid React Component
 
-### [Docs here](https://kseniya57.github.io/react-draggable-grid?path=/story/draggablegrid--example)
+### [Docs here](https://kseniya57.github.io/react-draggable-grid?path=/docs/mdx-draggablegrid--page)
 
 [![NPM](https://img.shields.io/npm/v/@kaprisa57/react-draggable-grid.svg)](https://www.npmjs.com/package/@kaprisa57/react-draggable-grid) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -120,7 +120,7 @@ function Column({ data, children, innerRef, draggableProps, dragHandleProps }) {
 }
 ```
 
-### [Docs here](https://kseniya57.github.io/react-draggable-grid?path=/story/draggablegrid--example)
+### [Docs here](https://kseniya57.github.io/react-draggable-grid?path=/docs/mdx-draggablegrid--page)
 
 ## License
 
