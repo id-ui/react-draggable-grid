@@ -1,1 +1,1 @@
-export { default as DraggableGrid } from './DraggableGrid';
+export { default } from './DraggableGrid';
