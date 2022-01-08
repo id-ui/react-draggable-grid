@@ -1,6 +1,5 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { reorder, reorderGrid } from './helpers';
 
@@ -29,7 +28,7 @@ function DraggableGrid({
 
   const handleDragEnd = result => {
     const { source, destination } = result;
-console.log(source, destination)
+
     if (
       !destination ||
       (source.droppableId === destination.droppableId &&
@@ -119,7 +118,9 @@ console.log(source, destination)
   );
 }
 
-const styledComponentShape = PropTypes.shape({render: PropTypes.func.isRequired});
+const styledComponentShape = PropTypes.shape({
+  render: PropTypes.func.isRequired
+});
 
 DraggableGrid.propTypes = {
   /**
@@ -146,7 +147,11 @@ DraggableGrid.propTypes = {
    * DraggableGrid provides prop children
    * @default div
    */
-  Container: PropTypes.oneOfType([PropTypes.func, PropTypes.element, styledComponentShape]),
+  Container: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.element,
+    styledComponentShape
+  ]),
   /**
    * Accepts Component or function
    * DraggableGrid provides the following props: { snapshot, draggableProps, dragHandleProps, innerRef, data, children }
@@ -155,7 +160,11 @@ DraggableGrid.propTypes = {
    * data - all provided column data from props
    * @default undefined
    */
-  Column: PropTypes.oneOfType([PropTypes.func, PropTypes.element, styledComponentShape]).isRequired,
+  Column: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.element,
+    styledComponentShape
+  ]).isRequired,
   /**
    * Accepts Component or function
    * DraggableGrid provides the following props: { snapshot, draggableProps, dragHandleProps, innerRef, data, children }
@@ -164,7 +173,11 @@ DraggableGrid.propTypes = {
    * data - all provided item data from props
    * @default undefined
    */
-  Item: PropTypes.oneOfType([PropTypes.func, PropTypes.element, styledComponentShape]).isRequired,
+  Item: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.element,
+    styledComponentShape
+  ]).isRequired,
   /**
    * Accepts function
    * This function provided with column as argument and should return flag meaning if column is draggable
@@ -197,10 +210,10 @@ function DefaultContainer({ children }) {
 
 DraggableGrid.defaultProps = {
   data: [],
-  getColumnItems: _.identity,
-  onChange: _.noop,
-  isColumnDraggable: _.constant(true),
-  isItemDraggable: _.constant(true),
+  getColumnItems: items => items,
+  onChange: () => {},
+  isColumnDraggable: () => true,
+  isItemDraggable: () => true,
   itemProps: {},
   columnProps: {},
   Container: DefaultContainer

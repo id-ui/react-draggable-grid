@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { last } from 'lodash';
 import produce from 'immer';
 
 export const reorder = (list, startIndex, endIndex) =>
@@ -7,7 +7,7 @@ export const reorder = (list, startIndex, endIndex) =>
     draft.splice(endIndex, 0, removed);
   });
 
-const getIndex = id => parseInt(_.last(id.split(':')), 10);
+const getIndex = id => parseInt(last(id.split(':')), 10);
 
 export const reorderGrid = ({ data, getColumnItems, source, destination }) => {
   const sourceColumnIndex = getIndex(source.droppableId);
